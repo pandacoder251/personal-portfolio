@@ -2,44 +2,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal Portfolio of Pousali Dolai — aspiring web developer turning dreams into bytes." />
+  <title>Personal Portfolio | Pousali Dolai</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- ================= HEADER / NAVBAR ================= -->
   <header>
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <nav class="navbar flex container">
+      <div class="logo">
+        <h2><a href="#home" class="logo-text">Personal Portfolio</a></h2>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="navlist flex">
+        <li><a href="#home" class="link">Home</a></li>
+        <li><a href="#about-me" class="link">About Me</a></li>
+        <li><a href="#skills" class="link">Skills</a></li>
+        <li><a href="#projects" class="link">Projects</a></li>
+        <li><a href="#roadmap" class="link">Roadmap</a></li>
+        <li><a href="#footer" class="link">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Button -->
+      <div id="menu-btn" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Mobile Menu -->
+      <ul id="mobile-menu" class="mobile-menu">
+        <li><a href="#home" class="link">Home</a></li>
+        <li><a href="#about-me" class="link">About Me</a></li>
+        <li><a href="#skills" class="link">Skills</a></li>
+        <li><a href="#projects" class="link">Projects</a></li>
+        <li><a href="#roadmap" class="link">Roadmap</a></li>
+        <li><a href="#footer" class="link">Contact</a></li>
       </ul>
     </nav>
-
-    <div class="mobile-menu">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-
-    <div class="mobile-menu-bar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <logo>
-      <h4>My Portfolio</h4>
   </header>
 
-  <main id="home">
-    <h1>Welcome to my Personal Portfolio</h1>
-    <p>I am learning web development.</p>
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="home section">
+      <div class="hero-content flex container">
+        <div>
+          <h1 class="name">Hello,</h1>
+          <h1 class="name">I'm <span class="span">Pousali Dolai</span></h1>
+          <h2 class="tagline">Turning dreams into <span class="span">Bytes</span></h2>
+        </div>
+      </div>
+    </section>
+
+    
   </main>
+
+ 
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
+
 </html>

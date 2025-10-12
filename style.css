@@ -1,129 +1,290 @@
-/* ====== GLOBAL STYLES ====== */
+/* ===============================
+   FONT & ROOT VARIABLES
+================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
-body {
-  background-color: #f8f9fa;
-  color: #222;
-  line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-/* ====== HEADER & NAVIGATION ====== */
-header {
-  width: 100%;
-  background-color: #1e1e1e;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+:root {
+    --white: #ffffff;
+    --light-black: #333333;
+    --clr1: #af4c87;
+    --clr2: #f7cac9;
+    --clr3: #e63946;
+    --clr4: #008cff;
+    --transition: all 0.3s ease-in-out;
 }
 
-.nav-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
+li {
+    list-style: none;
 }
 
-.nav-bar ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+a {
+    text-decoration: none;
 }
 
-.nav-bar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.container {
+    max-width: 85%;
+    margin: auto;
 }
 
-.nav-bar ul li a:hover {
-  color: #00bcd4;
-}
-
-/* ====== MAIN CONTENT ====== */
-main {
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-main h1 {
-  font-size: 2.5rem;
-  color: #1e1e1e;
-  margin-bottom: 1rem;
-}
-
-main p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-/* ====== MOBILE MENU ====== */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  position: absolute;
-  right: 1.5rem;
-  top: 1.2rem;
-}
-
-.mobile-menu div {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px;
-  transition: all 0.3s ease;
-}
-
-/* ====== MOBILE MENU BAR ====== */
-.mobile-menu-bar {
-  display: none;
-  background-color: #1e1e1e;
-}
-
-.mobile-menu-bar ul {
-  list-style: none;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-.mobile-menu-bar ul li {
-  margin: 1rem 0;
-}
-
-.mobile-menu-bar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.mobile-menu-bar ul li a:hover {
-  color: #00bcd4;
-}
-
-/* ====== RESPONSIVE DESIGN ====== */
-@media (max-width: 768px) {
-  .nav-bar ul {
-    display: none;
-  }
-
-  .mobile-menu {
+.flex {
     display: flex;
-  }
+    align-items: center;
+}
 
-  .mobile-menu-bar {
+.wrap {
+    flex-wrap: wrap;
+}
+
+.section {
+    padding-top: 5rem;
+}
+
+section {
+    scroll-margin-top: 12vh;
+}
+
+body{
+    background-color: #000000;
+    color: var(--white);
+}
+
+/* ===============================
+   NAVBAR
+================================= */
+header {
+    background-color: #fbf7d5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1);
+    padding: 0 1.5rem;
+    transition: background 0.4s ease;
+}
+
+.navbar {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--light-black);
+}
+
+.navlist {
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    font-size: 0.9rem;
+    color: var(--light-black);
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.link:hover {
+    color: var(--clr1);
+    font-weight: 600;
+}
+
+/* ===============================
+   HAMBURGER MENU
+================================= */
+.hamburger {
     display: none;
-  }
+    flex-direction: column;
+    justify-content: space-between;
+    width: 19px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
 
-  /* Show mobile menu when active */
-  .mobile-menu.active + .mobile-menu-bar {
+.hamburger span {
     display: block;
-  }
+    height: 3px;
+    width: 100%;
+    background: var(--light-black);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===============================
+   MOBILE MENU
+================================= */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 1.5rem;
+    background-color: var(--white);
+    width: 220px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 98;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: var(--transition);
+}
+
+.mobile-menu.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu a {
+    color: var(--light-black);
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: var(--clr1);
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+.home {
+    display: flex;
+     height: 90vh;
+    background: var(--black);
+    text-align: center;
+    color: var(--light-black);
+}
+
+.home h1 {
+    font-family: proxima-nova, sans-serif;
+    color: #fffafa;
+    justify-content: center;
+    font-size: 72px;
+    font-weight: 500;
+    margin-bottom: .1rem;
+}
+
+.home h2 {
+    font-family: proxima-nova, sans-serif;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #f9f9ce;
+    margin: 0px 0px 28px;
+    padding: 0px 0px 0px 3px;
+}
+
+span h1{
+    font-family: proxima-nova, sans-serif;
+    color: #fffafa;
+    justify-content: center;
+    font-size: 72px;
+    font-weight: 500;
+    margin-bottom: .1rem;
+}
+span h2{
+    font-family: proxima-nova, sans-serif;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #f9f9ce;
+    margin: 0px 0px 28px;
+    padding: 0px 0px 0px 3px;
+}
+span:hover {
+    color: var(--clr2);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+@media (max-width: 992px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navlist {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 12vh;
+        right: 1rem;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+
+    }
+
+    .home p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .home h1 {
+        font-size: 1.8rem;
+    }
+
+    .home p {
+        font-size: 0.95rem;
+    }
 }
