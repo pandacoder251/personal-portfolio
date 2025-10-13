@@ -1,40 +1,40 @@
-/* ===============================
-   FONT & ROOT VARIABLES
-================================= */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-* {
+/* ===============================GLOBAL RESET================================= */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--white);
+    background: var(--black);
+}
+
+/* ===============================ROOT VARIABLES================================= */
 :root {
     --white: #ffffff;
+    --black: #000000;
     --light-black: #333333;
     --clr1: #af4c87;
     --clr2: #f7cac9;
     --clr3: #e63946;
     --clr4: #008cff;
     --transition: all 0.3s ease-in-out;
+    --max-width: 85%;
 }
 
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
+/* ===============================UTILITY CLASSES================================= */
 .container {
-    max-width: 85%;
+    max-width: var(--max-width);
     margin: auto;
 }
 
@@ -48,30 +48,28 @@ a {
 }
 
 .section {
-    padding-top: 5rem;
+    padding: 5rem 0;
 }
 
-section {
-    scroll-margin-top: 12vh;
+li {
+    list-style: none;
 }
 
-body{
-    background-color: #000000;
-    color: var(--white);
+a {
+    text-decoration: none;
+    transition: var(--transition);
 }
 
-/* ===============================
-   NAVBAR
-================================= */
+/* ===============================NAVBAR================================= */
 header {
-    background-color: #fbf7d5;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99;
-    box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    background-color: #060606;
     padding: 0 1.5rem;
+    box-shadow: 0px 5px 14px rgba(238, 240, 243, 0.1);
     transition: background 0.4s ease;
 }
 
@@ -82,11 +80,10 @@ header {
     justify-content: space-between;
 }
 
-
 .logo-text {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--light-black);
+    color: var(--white);
 }
 
 .navlist {
@@ -96,10 +93,9 @@ header {
 
 .link {
     font-size: 0.9rem;
-    color: var(--light-black);
+    color: rgba(255, 255, 255, 0.85);
     text-transform: uppercase;
     font-weight: 500;
-    transition: var(--transition);
     cursor: pointer;
 }
 
@@ -108,25 +104,22 @@ header {
     font-weight: 600;
 }
 
-/* ===============================
-   HAMBURGER MENU
-================================= */
+/* ===============================HAMBURGER MENU================================= */
 .hamburger {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 19px;
+    width: 20px;
     height: 15px;
     cursor: pointer;
     z-index: 100;
-    transition: transform 0.3s ease;
 }
 
 .hamburger span {
     display: block;
     height: 3px;
     width: 100%;
-    background: var(--light-black);
+    background: var(--white);
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -143,102 +136,101 @@ header {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ===============================
-   MOBILE MENU
-================================= */
+/* ===============================MOBILE MENU================================= */
 .mobile-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 1rem;
-    position: absolute;
-    top: 100%;
-    right: 1.5rem;
+    position: fixed;
+    top: 12vh;
+    right: 1rem;
     background-color: var(--white);
     width: 220px;
     padding: 1rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    z-index: 98;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     opacity: 0;
+    visibility: hidden;
     transform: translateY(-20px);
     transition: var(--transition);
 }
 
 .mobile-menu.show {
-    display: flex;
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
 }
 
 .mobile-menu a {
     color: var(--light-black);
-    font-size: .8rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .mobile-menu a:hover {
-    color: var(--clr1);
+    color: var(--clr2);
 }
 
-/* ===============================
-   HERO SECTION
-================================= */
+/* ===============================HERO SECTION================================= */
 .home {
+    min-height: 90vh;
     display: flex;
-     height: 90vh;
-    background: var(--black);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: var(--light-black);
+    background: var(--black);
+    color: var(--white);
 }
 
 .home h1 {
-    font-family: proxima-nova, sans-serif;
-    color: #fffafa;
-    justify-content: center;
-    font-size: 72px;
+    font-size: 4.5rem;
     font-weight: 500;
-    margin-bottom: .1rem;
+    margin-bottom: 0.3rem;
 }
 
 .home h2 {
-    font-family: proxima-nova, sans-serif;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 500;
-    color: #f9f9ce;
-    margin: 0px 0px 28px;
-    padding: 0px 0px 0px 3px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #f7f7da;
+    margin-bottom: 1.5rem;
 }
 
-span h1{
-    font-family: proxima-nova, sans-serif;
-    color: #fffafa;
-    justify-content: center;
-    font-size: 72px;
-    font-weight: 500;
-    margin-bottom: .1rem;
-}
-span h2{
-    font-family: proxima-nova, sans-serif;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 500;
-    color: #f9f9ce;
-    margin: 0px 0px 28px;
-    padding: 0px 0px 0px 3px;
-}
-span:hover {
-    color: var(--clr2);
-    font-weight: 600;
+span {
     cursor: pointer;
+    transition: var(--transition);
 }
 
+span:hover {
+    color: var(--clr1);
+    font-weight: 600;
+}
 
-/* ===============================
-   RESPONSIVE DESIGN
-================================= */
+/* ===============================ABOUT ME================================= */
+.about-me {
+    color: var(--white);
+    padding: 3rem 0;
+
+
+
+}
+
+.about-me h2 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-me p {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ===============================RESPONSIVE DESIGN================================= */
 @media (max-width: 992px) {
     .container {
         max-width: 90%;
@@ -254,37 +246,29 @@ span:hover {
         display: flex;
     }
 
-    .mobile-menu {
-        position: fixed;
-        top: 12vh;
-        right: 1rem;
-    }
-
     .home h1 {
-        font-size: 2rem;
-
+        font-size: 2.8rem;
     }
 
-    .home p {
+    .home h2 {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .logo img {
-        width: 30px;
-        height: 30px;
-    }
-
     .logo-text {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .home h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
-    .home p {
-        font-size: 0.95rem;
+    .home h2 {
+        font-size: 0.9rem;
+    }
+
+    .about-me h2 {
+        font-size: 2rem;
     }
 }
