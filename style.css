@@ -1,9 +1,19 @@
+/* ===============================GLOBAL RESET================================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--white);
     background: var(--black);
@@ -18,6 +28,7 @@ body {
     --clr2: #f7cac9;
     --clr3: #e63946;
     --clr4: #008cff;
+    --transition: all 0.3s ease-in-out;
     --max-width: 85%;
 }
 
@@ -99,196 +110,7 @@ header {
     color: var(--clr1);
 }
 
-
-/* ===============================HAMBURGER MENU================================= */
-.home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: var(--black);
-    color: var(--white);
-}
-
-.home h1 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.home h2 {
-    font-size: 2.2rem;
-    color: #f7f7da;
-    margin-bottom: 1.5rem;
-    transition: 0.3s ease-in-out;
-}
-
-span {
-    cursor: pointer;
-}
-
-span:hover {
-    color: var(--clr1);
-}
-
-/* ===============================ABOUT ME================================= */
-.about-me {
-    color: var(--white);
-    padding: 3rem 0;
-
-}
-
-.about-me h2 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    text-align: center;
-
-
-}
-
-.about-me p {
-    font-size: 1rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: auto;
-}
-
-
-.p1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-}
-
-.p2 {
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-}
-
-.p3 {
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-}
-
-.p4 {
-
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-
-}
-
-.p1:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;
-}
-
-.p2:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;
-}
-
-.p3:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;
-}
-
-.p4:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;
-}
-
-/* =============================== SKILLS SECTION =============================== */
-.skills {
-    background-color: var(--black);
-    color: var(--white);
-    text-align: center;
-    padding: 5rem 0;
-}
-
-.skills h2 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.skills-flow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    position: relative;
-}
-
-
-.skill-node {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    font-size: 1rem;
-    color: var(--white);
-    text-align: center;
-    opacity: 50%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-
-.skill-node:hover {
-    opacity: 100%;
-    box-shadow: 0 0 20px var(--white);
-}
-
-/* ===============================RESPONSIVE DESIGN================================= */
-@media (max-width: 992px) {
-    .container {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    .navlist {
-        display: none;
-    }
-
+    /* ===============================HAMBURGER MENU================================= */
     .hamburger {
         display: none;
         flex-direction: column;
@@ -328,7 +150,9 @@ span:hover {
         position: fixed;
         top: 12vh;
         right: 1rem;
-        background-color: #ffffffc9;
+        background-color: var(--black);
+        border: #ffffff solid 0.2px;
+        border-radius: 2rem;
         width: 220px;
         padding: 1rem 1.5rem;
         border-radius: 10px;
@@ -346,14 +170,14 @@ span:hover {
     }
 
     .mobile-menu a {
-        color: var(--light-black);
+        color: var(--white);
         font-size: 0.85rem;
         text-transform: uppercase;
         font-weight: 500;
     }
 
     .mobile-menu a:hover {
-        color: var(--clr1);
+       color: var(--clr1);
     }
 
     /* ===============================HERO SECTION================================= */
@@ -425,6 +249,7 @@ span:hover {
         border: 1px solid var(--white);
         margin: 1rem 0;
         border-radius: 12px;
+        background-color: var(--black);
         padding: 1.5rem;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         line-height: 1.8;
@@ -593,7 +418,3 @@ span:hover {
             font-size: 2rem;
         }
     }
-
-  
-}
-
