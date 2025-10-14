@@ -71,6 +71,9 @@ header {
     padding: 0 1.5rem;
     box-shadow: 0px 5px 14px rgba(238, 240, 243, 0.1);
     transition: background 0.4s ease;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .navbar {
@@ -144,7 +147,7 @@ header {
     position: fixed;
     top: 12vh;
     right: 1rem;
-    background-color: var(--white);
+    background-color: #ffffffc9;
     width: 220px;
     padding: 1rem 1.5rem;
     border-radius: 10px;
@@ -212,8 +215,6 @@ span:hover {
     color: var(--white);
     padding: 3rem 0;
 
-
-
 }
 
 .about-me h2 {
@@ -221,6 +222,8 @@ span:hover {
     font-weight: 300;
     margin-bottom: 1rem;
     text-align: center;
+
+
 }
 
 .about-me p {
@@ -228,6 +231,77 @@ span:hover {
     line-height: 1.8;
     max-width: 800px;
     margin: auto;
+    flex-direction: column;
+}
+
+
+.p1{
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid var(--white);
+    margin: 1rem 0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.8;
+    opacity: 20%;
+}
+.p2{
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid var(--white);
+    margin: 1rem 0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.8;
+    opacity: 20%;
+}
+.p3{
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid var(--white);
+    margin: 1rem 0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.8;
+    opacity: 20%;
+}
+.p4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid var(--white);
+    margin: 1rem 0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.8;
+    opacity: 20%;
+    
+}
+
+.p1:hover{
+     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+    opacity: 100%;
+}
+.p2:hover{
+     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+    opacity: 100%;
+}
+.p3:hover{ box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+    opacity: 100%;}
+.p4:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+    opacity: 100%;
 }
 
 /* ===============================RESPONSIVE DESIGN================================= */
