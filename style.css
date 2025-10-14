@@ -371,14 +371,10 @@ span:hover {
     }
 
     .skills-flow {
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
   }
 
-  .connector {
-    width: 2px;
-    height: 60px;
-  }
 
   .skill-node {
     width: 100px;
