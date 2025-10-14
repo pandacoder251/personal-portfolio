@@ -104,308 +104,314 @@ header {
 
 .link:hover {
     color: var(--clr1);
-    font-weight: 600;
 }
 
-/* ===============================HAMBURGER MENU================================= */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 20px;
-    height: 15px;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: var(--white);
-    border-radius: 2px;
-    transition: var(--transition);
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* ===============================MOBILE MENU================================= */
-.mobile-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: fixed;
-    top: 12vh;
-    right: 1rem;
-    background-color: #ffffffc9;
-    width: 220px;
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: var(--transition);
-}
-
-.mobile-menu.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.mobile-menu a {
-    color: var(--light-black);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.mobile-menu a:hover {
+.link.active {
     color: var(--clr1);
 }
 
-/* ===============================HERO SECTION================================= */
-.home {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: var(--black);
-    color: var(--white);
-}
-
-.home h1 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.home h2 {
-    font-size: 2.2rem;
-    font-weight: 300;
-    color: #f7f7da;
-    margin-bottom: 1.5rem;
-}
-
-span {
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-span:hover {
-    color: var(--clr1);
-}
-
-/* ===============================ABOUT ME================================= */
-.about-me {
-    color: var(--white);
-    padding: 3rem 0;
-
-}
-
-.about-me h2 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    text-align: center;
-
-
-}
-
-.about-me p {
-    font-size: 1rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: auto;
-}
-
-
-.p1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-}
-
-.p2 {
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-}
-
-.p3 {
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-}
-
-.p4 {
-
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-
-}
-
-.p1:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;
-}
-
-.p2:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;
-}
-
-.p3:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;
-}
-
-.p4:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;
-}
-
-/* =============================== SKILLS SECTION =============================== */
-.skills {
-    background-color: var(--black);
-    color: var(--white);
-    text-align: center;
-    padding: 5rem 0;
-}
-
-.skills h2 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.skills-flow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    position: relative;
-}
-
-
-.skill-node {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    font-size: 1rem;
-    color: var(--white);
-    text-align: center;
-    opacity: 50%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-
-.skill-node:hover {
-    transform: translateY(-5px);
-    opacity: 100%;
-    box-shadow: 0 0 20px var(--white);
-}
-
-/* ===============================RESPONSIVE DESIGN================================= */
-@media (max-width: 992px) {
-    .container {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    .navlist {
-        display: none;
-    }
-
+    /* ===============================HAMBURGER MENU================================= */
     .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20px;
+        height: 15px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: var(--white);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ===============================MOBILE MENU================================= */
+    .mobile-menu {
         display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: fixed;
+        top: 12vh;
+        right: 1rem;
+        background-color: #ffffffc9;
+        width: 220px;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: var(--transition);
+    }
+
+    .mobile-menu.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .mobile-menu a {
+        color: var(--light-black);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .mobile-menu a:hover {
+        color: var(--clr1);
+    }
+
+    /* ===============================HERO SECTION================================= */
+    .home {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: var(--black);
+        color: var(--white);
     }
 
     .home h1 {
-        font-size: 2.8rem;
+        font-size: 4.5rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        text-align: center;
+        padding-bottom: 120;
+
     }
 
     .home h2 {
+        font-size: 2.2rem;
+        font-weight: 200;
+        color: #f7f7da;
+        margin-bottom: 1.5rem;
+    }
+
+    span {
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    span:hover {
+        color: var(--clr1);
+        text-shadow: #ffffff4e 0px 0px 8px;
+    }
+
+    /* ===============================ABOUT ME================================= */
+    .about-me {
+        color: var(--white);
+        padding: 3rem 0;
+
+    }
+
+    .about-me h2 {
+        font-size: 4.5rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-shadow: #ffffff4e 0px 0px 8px;
+    }
+
+    .about-me p {
         font-size: 1rem;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: auto;
+    }
+
+
+    .p1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        border: 1px solid var(--white);
+        margin: 1rem 0;
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        line-height: 1.8;
+        opacity: 20%;
+    }
+
+    .p2 {
+        align-items: flex-start;
+        justify-content: space-between;
+        border: 1px solid var(--white);
+        margin: 1rem 0;
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        line-height: 1.8;
+        opacity: 20%;
+    }
+
+    .p3 {
+        align-items: flex-start;
+        justify-content: space-between;
+        border: 1px solid var(--white);
+        margin: 1rem 0;
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        line-height: 1.8;
+        opacity: 20%;
+    }
+
+    .p4 {
+
+        align-items: flex-start;
+        justify-content: space-between;
+        border: 1px solid var(--white);
+        margin: 1rem 0;
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        line-height: 1.8;
+        opacity: 20%;
+
+    }
+
+    .p1:hover {
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+        opacity: 100%;
+    }
+
+    .p2:hover {
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+        opacity: 100%;
+    }
+
+    .p3:hover {
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+        opacity: 100%;
+    }
+
+    .p4:hover {
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+        opacity: 100%;
+    }
+
+    /* =============================== SKILLS SECTION =============================== */
+    .skills {
+        background-color: var(--black);
+        color: var(--white);
+        text-align: center;
+        padding: 5rem 0;
+    }
+
+    .skills h2 {
+        font-size: 4.5rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-shadow: #ffffff4e 0px 0px 8px;
     }
 
     .skills-flow {
+        display: flex;
         flex-direction: row;
-        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        position: relative;
     }
 
 
     .skill-node {
-        width: 100px;
-        height: 100px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-text {
-        font-size: 1.2rem;
-    }
-
-    .home h1 {
-        font-size: 2rem;
-    }
-
-    .home h2 {
-        font-size: 0.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--white);
+        text-align: center;
+        opacity: 50%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     }
 
-    .about-me h2 {
-        font-size: 2rem;
+
+    .skill-node:hover {
+        border: #ffffff;
+        opacity: 100%;
+        box-shadow: 0 0 20px var(--white);
     }
-}
+
+    /* ===============================RESPONSIVE DESIGN================================= */
+    @media (max-width: 992px) {
+        .container {
+            max-width: 90%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navlist {
+            display: none;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .home h1 {
+            font-size: 2.8rem;
+        }
+
+        .home h2 {
+            font-size: 1rem;
+        }
+
+        .skills-flow {
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+
+        .skill-node {
+            width: 100px;
+            height: 100px;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo-text {
+            font-size: 1.2rem;
+        }
+
+        .home h1 {
+            font-size: 2rem;
+        }
+
+        .home h2 {
+            font-size: 0.9rem;
+        }
+
+        .about-me h2 {
+            font-size: 2rem;
+        }
+    }
