@@ -189,12 +189,13 @@ header {
 
 .home h1 {
     font-size: 4.5rem;
-    font-weight: 500;
-    margin-bottom: 0.3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .home h2 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     font-weight: 300;
     color: #f7f7da;
     margin-bottom: 1.5rem;
@@ -207,7 +208,6 @@ span {
 
 span:hover {
     color: var(--clr1);
-    font-weight: 600;
 }
 
 /* ===============================ABOUT ME================================= */
@@ -234,7 +234,7 @@ span:hover {
 }
 
 
-.p1{
+.p1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -247,7 +247,8 @@ span:hover {
     line-height: 1.8;
     opacity: 20%;
 }
-.p2{
+
+.p2 {
     align-items: flex-start;
     justify-content: space-between;
     border: 1px solid var(--white);
@@ -257,93 +258,101 @@ span:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     line-height: 1.8;
     opacity: 20%;
-}
-.p3{
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-}
-.p4 {
-   
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid var(--white);
-    margin: 1rem 0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    line-height: 1.8;
-    opacity: 20%;
-    
 }
 
-.p1:hover{
-     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+.p3 {
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid var(--white);
+    margin: 1rem 0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.8;
+    opacity: 20%;
+}
+
+.p4 {
+
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid var(--white);
+    margin: 1rem 0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.8;
+    opacity: 20%;
+
+}
+
+.p1:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
     opacity: 100%;
 }
-.p2:hover{
-     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+
+.p2:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
     opacity: 100%;
 }
-.p3:hover{ box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
-    opacity: 100%;}
+
+.p3:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
+    opacity: 100%;
+}
+
 .p4:hover {
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.17);
     opacity: 100%;
 }
+
 /* =============================== SKILLS SECTION =============================== */
 .skills {
-  background-color: var(--black);
-  color: var(--white);
-  text-align: center;
-  padding: 5rem 0;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 0;
 }
 
 .skills h2 {
-   font-size: 4.5rem;
+    font-size: 4.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .skills-flow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: relative;
 }
 
 
 .skill-node {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-size: 1rem;
-  color: var(--white);
-  text-align: center;
-  opacity: 50%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--white);
+    text-align: center;
+    opacity: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 
 .skill-node:hover {
-  transform: translateY(-5px);
-  opacity: 100%;
-  box-shadow: 0 0 20px var(--white);
+    transform: translateY(-5px);
+    opacity: 100%;
+    box-shadow: 0 0 20px var(--white);
 }
 
 /* ===============================RESPONSIVE DESIGN================================= */
@@ -371,16 +380,16 @@ span:hover {
     }
 
     .skills-flow {
-    flex-direction: row;
-    gap: 2rem;
-  }
+        flex-direction: row;
+        gap: 2rem;
+    }
 
 
-  .skill-node {
-    width: 100px;
-    height: 100px;
-    font-size: 0.9rem;
-  }
+    .skill-node {
+        width: 100px;
+        height: 100px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
