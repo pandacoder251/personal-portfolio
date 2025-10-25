@@ -16,7 +16,7 @@ body {
         Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--white);
-    background: linear-gradient( #172700, #000000 , #001727);
+    background: BLACK;
 }
 
 /* ===============================ROOT VARIABLES================================= */
@@ -83,6 +83,7 @@ header {
     justify-content: space-between;
 }
 
+
 .logo-text {
     font-size: 1.5rem;
     font-weight: 600;
@@ -110,132 +111,134 @@ header {
     color: var(--clr1);
 }
 
-    /* ===============================HAMBURGER MENU================================= */
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 20px;
-        height: 15px;
-        cursor: pointer;
-        z-index: 100;
-    }
+/* ===============================HAMBURGER MENU================================= */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 100;
+}
 
-    .hamburger span {
-        display: block;
-        height: 3px;
-        width: 100%;
-        background: var(--white);
-        border-radius: 2px;
-        transition: var(--transition);
-    }
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 2px;
+    transition: var(--transition);
+}
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
 
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
 
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
 
-    /* ===============================MOBILE MENU================================= */
-    .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        position: fixed;
-        top: 12vh;
-        right: 1rem;
-        background-color: var(--black);
-        border: #ffffff solid 0.2px;
-        border-radius: 2rem;
-        width: 220px;
-        padding: 1rem 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        transition: var(--transition);
-    }
+/* ===============================MOBILE MENU================================= */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: fixed;
+    top: 12vh;
+    right: 1rem;
+    background-color: var(--black);
+    border: #ffffff solid 0.2px;
+    border-radius: 2rem;
+    width: 220px;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: var(--transition);
+}
 
-    .mobile-menu.show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
+.mobile-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
-    .mobile-menu a {
-        color: var(--white);
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        font-weight: 500;
-    }
+.mobile-menu a {
+    color: var(--white);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
 
-    .mobile-menu a:hover {
-       color: var(--clr1);
-    }
+.mobile-menu a:hover {
+    color: var(--clr1);
+}
 
-    /* ===============================HERO SECTION================================= */
-    .home {
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: var(--white);
-    }
+/* ===============================HERO SECTION================================= */
+.home {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
 
-    .home h1 {
-        font-size: 4.5rem;
-        font-weight: 300;
-        margin-bottom: 1rem;
-        text-align: center;
-        padding-bottom: 120;
+.home h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-bottom: 120;
 
-    }
+}
 
-    .home h2 {
-        font-size: 2.2rem;
-        font-weight: 200;
-        color: #f7f7da;
-        margin-bottom: 1.5rem;
-    }
+.home h2 {
+    font-size: 2.2rem;
+    font-weight: 200;
+    color: #f7f7da;
+    margin-bottom: 1.5rem;
+}
 
-    span {
-        cursor: pointer;
-        transition: var(--transition);
-    }
+span {
+    cursor: pointer;
+    transition: var(--transition);
+}
 
-    span:hover {
-        color: var(--clr1);
-        text-shadow: #ffffff4e 0px 0px 8px;
-    }
+span:hover {
+    color: var(--clr1);
+    /*shape-hover : handdrawn arrow to circle around the contact me
+        */
+}
 
-   /* .scribble-wrapper {
+.scribble-wrapper {
   position: relative;
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-weight: 200;
   color: white;
   padding: 0.2em 0.6em;
 }
 
-.scribble-wrapper::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='60' viewBox='0 0 160 60'><path d='M10 30 Q80 10,150 25 M150 25 Q120 50,40 45' stroke='%23ffffff' stroke-width='2.5' fill='none' stroke-linecap='round'/><path d='M145 20 L155 25 L145 30' stroke='%23ffffff' stroke-width='2' fill='none'/></svg>") no-repeat center;
-  background-size: contain;
-  pointer-events: none;
+.scribble-wrapper{
+    font-size: 1.4rem;
+    cursor: pointer;
 }
 
-*/
+.scribble-wrapper:hover{
+    content: '';
+    background: url('scribble-circle.png') no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
 
     /* ===============================ABOUT ME================================= */
     .about-me {
